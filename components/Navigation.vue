@@ -1,17 +1,23 @@
 <template>
-  <nav>
-    <ul>
-      <li>
-        <nuxt-link to="/">Home</nuxt-link>
-      </li>
-      <li>
-        <nuxt-link to="/blogs">Posts</nuxt-link>
-      </li>
-      <li>
-        <nuxt-link to="/wiki">Wiki</nuxt-link>
-      </li>
-    </ul>
-  </nav>
+  <div>
+    <nav>
+      <ul>
+        <li>
+          <nuxt-link to="/">Home</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/blog">Blog</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/wiki">Wiki</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/about">About</nuxt-link>
+        </li>
+      </ul>
+    </nav>
+    <SearchInput />
+  </div>
 </template>
 
 <script>
