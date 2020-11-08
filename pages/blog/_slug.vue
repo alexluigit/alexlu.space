@@ -1,6 +1,7 @@
 <template>
   <article>
     <ArticleInfo :title="article.title" :createdAt="article.createdAt" :tags="article.tags" />
+    <Toc :toc="article.toc" />
     <nuxt-content :document="article" />
     <PrevNext :prev="prev" :next="next" />
   </article>
