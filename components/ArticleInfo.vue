@@ -2,9 +2,13 @@
   <div>
     <h1>{{ title }}</h1>
     <p>{{ formatDate(createdAt) }}</p>
-    <div class="test" v-for="tag in tags" :key="tag">
-      <a href="/tags">{{ tag }}</a>
-    </div>
+    <nuxt-link
+      class="taglist"
+      v-for="tag in tags"
+      :key="tag"
+      :to="`/tag/${tag}`"
+      >{{ tag }}</nuxt-link
+    >
   </div>
 </template>
 
