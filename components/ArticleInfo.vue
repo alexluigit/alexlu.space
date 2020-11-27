@@ -9,33 +9,33 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      title: { type: String },
-      createdAt: { type: String },
-      tags: { type: Array }
-    },
+export default {
+  async asyncData() {},
 
-    methods: {
-      formatDate(date) {
-        const options = { year: 'numeric', month: 'short', day: 'numeric' }
-        return new Date(date).toLocaleDateString('en', options)
-      }
-    }
-  }
+  props: {
+    title: { type: String },
+    createdAt: { type: String },
+    tags: { type: Array },
+  },
+
+  methods: {
+    formatDate(date) {
+      const options = { year: "numeric", month: "short", day: "numeric" };
+      return new Date(date).toLocaleDateString("en", options);
+    },
+  },
+};
 </script>
 
 <style lang="scss">
-  h1 {
-    font-weight: bold;
-    font-size: 2em;
-  }
+h1 {
+  font-weight: bold;
+  font-size: 2em;
+}
 
-  .test {
-    display: inline-block;
-    a {
-      text-decoration: none;
-      padding: 0.6em;
-    }
-  }
+.taglist {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.6em;
+}
 </style>

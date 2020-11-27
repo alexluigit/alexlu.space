@@ -2,7 +2,12 @@
   <nav>
     <ul>
       <li v-for="link of toc" :key="link.id">
-        <NuxtLink class="toc-link" :class="{ 'lv2': link.depth === 2, 'lv3': link.depth === 3 }" :to="`#${link.id}`">{{ link.text }}</NuxtLink>
+        <NuxtLink
+          class="toc-link"
+          :class="{ lv2: link.depth === 2, lv3: link.depth === 3 }"
+          :to="`#${link.id}`"
+          >{{ link.text }}</NuxtLink
+        >
       </li>
     </ul>
   </nav>
@@ -11,27 +16,19 @@
 <script>
 export default {
   props: {
-    toc: { type: Array }
+    toc: { type: Array },
   },
-
-  data () {
-    return {
-    }
-  },
-
-  methods: {
-  }
-}
+};
 </script>
 
 <style lang="scss" scoped>
-  ul {
-    .toc-link {
-      text-decoration: none;
-    }
-
-    .lv3 {
-        margin-left: 1em;
-    }
+ul {
+  .toc-link {
+    text-decoration: none;
   }
+
+  .lv3 {
+    margin-left: 1em;
+  }
+}
 </style>
