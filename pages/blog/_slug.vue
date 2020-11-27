@@ -26,35 +26,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .nuxt-content {
-    h2 {
-      font-weight: bold;
-      font-size: 1.5em;
-    }
-    h3 {
-      font-weight: bold;
-      font-size: 1.2em;
-    }
-    p {
-      margin-bottom: 0.8em;
-    }
-
-    .icon.icon-link {
-      background-image: url('../../assets/svg/icon-heading-link.svg');
-      display: inline-block;
-      width: 0.8em;
-      height: 0.8em;
-      background-size: 0.8em 0.8em;
-    }
-
-    .nuxt-content-highlight {
-      .filename {
-        position: absolute;
-        z-index: 1;
-        right: 0.5em;
-        color: darkgray;
-      }
-    }
-  }
-
 </style>

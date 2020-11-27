@@ -1,0 +1,78 @@
+:root {
+  font-size: 16px;
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --transition-speed: 600ms;
+}
+
+html {
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: black;
+  background: white;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  &::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+  &::-webkit-scrollbar-track {
+    background: #1e1e24;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #6649b8;
+  }
+}
+
+main {
+  margin-left: 5rem;
+  padding: 1rem;
+}
+
+.nuxt-content {
+  background: var(--bg-secondary);
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  h2 {
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+  h3 {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  p {
+    margin-bottom: 0.8em;
+  }
+  .icon.icon-link {
+    background-image: url("~assets/svg/icon-heading-link.svg");
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    background-size: 0.8em 0.8em;
+  }
+  .nuxt-content-highlight {
+    .filename {
+      position: absolute;
+      z-index: 1;
+      right: 0.5em;
+      color: darkgray;
+    }
+  }
+}
