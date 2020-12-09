@@ -25,6 +25,12 @@
   src: url("~assets/fonts/WorkSans-SemiBold.ttf") format("truetype");
 }
 
+* {
+  &::-webkit-scrollbar { width: 0.5rem; height: 0.5rem; }
+  &::-webkit-scrollbar-track { background: #1e1e24; }
+  &::-webkit-scrollbar-thumb { background: #6649b8; }
+}
+
 html {
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -47,20 +53,6 @@ body {
   background: white;
   font-family: "Work Sans", sans-serif;
   font-weight: 300;
-  &::-webkit-scrollbar {
-    width: 0.25rem;
-  }
-  &::-webkit-scrollbar-track {
-    background: #1e1e24;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: #6649b8;
-  }
-}
-
-main {
-  margin-left: 5rem;
-  padding: 1rem;
 }
 
 .nuxt-content {
