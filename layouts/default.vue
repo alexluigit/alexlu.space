@@ -1,11 +1,10 @@
 <template>
   <div>
-    <Navigation />
-    <main>
+    <TheHeader />
+    <main class="relative flex">
       <Nuxt />
     </main>
+    <TheFooter />
+    <MobileBottomNav />
   </div>
 </template>
-
-<style lang="scss">
-</style>
