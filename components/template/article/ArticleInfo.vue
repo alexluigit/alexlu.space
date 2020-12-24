@@ -39,7 +39,6 @@ h1 {
 
 .taglist {
   display: inline-block;
-  text-decoration: none;
   padding: 0.6em;
 }
 </style>
