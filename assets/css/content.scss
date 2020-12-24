@@ -1,0 +1,57 @@
+.nuxt-content {
+  max-width: calc(100vw - 0.5rem);
+  // border: cyan 2px solid;
+  font-weight: 300;
+  h2 {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  p {
+    margin-bottom: 0.8em;
+  }
+  .icon.icon-link {
+    background-image: url("~assets/icons/hashtag.svg");
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    margin-right: 0.5rem;
+    background-size: 0.8em 0.8em;
+  }
+}
+
+.nuxt-content-highlight {
+  @apply relative;
+  & > .filename {
+    @apply absolute right-0 top-0 text-gray-400 font-light z-10 mr-2 mt-1 text-sm;
+  }
+  & > .copy {
+    @apply hidden absolute right-0 bottom-0 leading-none shadow-lg px-1 py-1 text-white bg-gray-800 text-sm uppercase rounded-md border border-white font-semibold mr-2 mb-2;
+    &:hover {
+      @apply bg-gray-700;
+    }
+    &:focus {
+      @apply outline-none bg-gray-900;
+    }
+  }
+  &:hover {
+    & > .copy {
+      @apply block;
+    }
+  }
+}
+
+.nuxt-content {
+  .token.comment {
+    color: #acb5b9;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .nuxt-content {
+    max-width: calc(100vw - 12.5rem);
+  }
+}
