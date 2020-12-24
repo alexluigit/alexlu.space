@@ -13,8 +13,8 @@ export default {
   css: ['@/assets/css/main.scss'],
   components: true,
   buildModules: [
-    // '@nuxt/typescript-build',
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/svg',
   ],
   modules: [
     '@nuxt/content',
