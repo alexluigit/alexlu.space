@@ -4,10 +4,12 @@ module.exports = {
     browser: true,
     node: true
   },
-  extends: [
-    '@nuxtjs/eslint-config-typescript',
-    'plugin:nuxt/recommended'
-  ],
+  parserOptions: {
+    parser: 'babel-eslint',
+    sourceType: 'module',
+    ecmaVersion: 2020
+  },
+  extends: ['plugin:nuxt/recommended', 'eslint-config-prettier'],
   plugins: [
   ],
   // add your custom rules here
