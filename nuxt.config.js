@@ -1,5 +1,4 @@
 export default {
-  // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'blog',
     meta: [
@@ -18,11 +17,38 @@ export default {
     '@nuxtjs/tailwindcss',
   ],
   modules: [
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content'
+    '@nuxt/content',
+    'nuxt-i18n'
   ],
-
-  // Content module configuration (https://go.nuxtjs.dev/config-content)
+  plugins: [
+    // '~/plugins/i18n'
+  ],
+  i18n: {
+    vueI18n: {
+      fallbackLocale: 'en'
+    },
+    defaultLocale: 'en',
+    parsePages: false,
+    detectBrowserLanguage: false,
+    seo: false,
+    lazy: true,
+    langDir: 'i18n/',
+    strategy: 'prefix_except_default',
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US',
+        file: 'en-US.js',
+        name: 'English'
+      },
+      {
+        code: 'zh',
+        iso: 'zh-ZH',
+        file: 'zh-ZH.js',
+        name: '简体中文'
+      }
+    ]
+  },
   content: {
     markdown: {
       prism: {
