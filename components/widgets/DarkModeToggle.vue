@@ -6,35 +6,24 @@
     <span
       class="relative overflow-hidden h-5 w-5 flex items-center justify-center"
     >
-      <MoonIcon
+      <icon-collection
+        name="moon"
         class="w-4 h-4 absolute"
-        :class="
-          currentTheme === 'dark' ? 'show group-hover:animate-bounce' : 'hide'
-        "
-      />
-      <SunIcon
+        :class="currentTheme === 'dark' ? 'show group-hover:animate-bounce' : 'hide'"
+        />
+      <icon-collection
+        name="sun"
         class="w-4 h-4 absolute"
-        :class="
-          currentTheme === 'light'
-            ? 'show group-hover:animate-spin-slow'
-            : 'hide'
-        "
-      />
+        :class="currentTheme === 'light' ? 'show group-hover:animate-spin-slow' : 'hide'"
+        />
     </span>
   </button>
 </template>
 
 <script>
-import SunIcon from "~/assets/icons/sun.svg?inline";
-import MoonIcon from "~/assets/icons/moon.svg?inline";
-
 export default {
   mounted() {
     this.getCurrentTheme();
-  },
-  components: {
-    SunIcon,
-    MoonIcon,
   },
   props: [],
   data() {

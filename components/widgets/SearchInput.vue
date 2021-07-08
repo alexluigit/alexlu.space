@@ -14,7 +14,8 @@
       <div
         class="absolute top-0 left-3.5 flex-shrink-0 text-light-fg dark:text-dark-fg pointer-events-none"
       >
-        <SearchIcon
+        <icon-collection
+          name="search"
           class="h-3 mt-3.5 xl:h-4 xl:mt-3 group-hover:animate-wiggle"
         />
       </div>
@@ -63,9 +64,7 @@
 </template>
 
 <script>
-import SearchIcon from "~/assets/icons/search.svg?inline";
 export default {
-  components: { SearchIcon },
   data() {
     return {
       searchQuery: "",
