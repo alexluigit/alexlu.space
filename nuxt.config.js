@@ -11,7 +11,12 @@ export default {
     ]
   },
   css: ['@/assets/css/main.scss'],
-  components: true,
+  components: [
+    '~/components/templates',
+    '~/components/widgets',
+    '~/components/atoms',
+    '~/components/molecules',
+  ],
   buildModules: [
     '@nuxtjs/tailwindcss',
   ],
