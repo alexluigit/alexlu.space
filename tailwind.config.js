@@ -9,6 +9,7 @@ module.exports = {
         sans: [ 'Quicksand', 'system-ui' ]
       },
       colors: {
+        orange: colors.orange,
         primary: {
           base: '#00C58E',
           light: '#00E0A1',
