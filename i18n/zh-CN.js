@@ -1,10 +1,10 @@
 export default {
   common: {
-    an_error_occurred: 'An error occurred',
-    page_not_found: 'Page not found',
-    search: 'Search ("/" to focus)'
+    an_error_occurred: '访问出错了',
+    page_not_found: '页面不存在',
+    search: '按下 "/" 键进入搜索'
   },
-  iso: 'en',
+  iso: 'zh',
   header: {
     logo: {
       icon: 'logo'
@@ -18,7 +18,7 @@ export default {
       {
         name: 'Wiki',
         icon: 'wiki',
-        slug: 'wiki'
+        slug: 'wiki-topic-slug'
       },
       {
         name: 'Topics',
@@ -32,7 +32,7 @@ export default {
       }
     ],
     search: {
-      placeholder: 'Search ("/" to focus)'
+      placeholder: '按下 "/" 键进入搜索'
     }
   },
   footer: {
@@ -41,22 +41,22 @@ export default {
         {
           name: 'Twitter',
           icon: 'twitter',
-          href: '#'
+          href: 'http://twitter.com'
         },
         {
           name: 'Youtube',
           icon: 'youtube',
-          href: '#'
+          href: 'http://youtube.com'
         },
         {
           name: 'Github',
           icon: 'github',
-          href: '#'
+          href: 'http://github.com'
         },
         {
           name: 'Weibo',
           icon: 'weibo',
-          href: '#'
+          href: 'http://weibo.com'
         }
       ]
     }

@@ -25,7 +25,7 @@ export default {
     'nuxt-i18n'
   ],
   plugins: [
-    // '~/plugins/i18n'
+    '~/plugins/i18n'
   ],
   i18n: {
     vueI18n: {
@@ -47,13 +47,14 @@ export default {
       },
       {
         code: 'zh',
-        iso: 'zh-ZH',
-        file: 'zh-ZH.js',
+        iso: 'zh-CN',
+        file: 'zh-CN.js',
         name: '简体中文'
       }
     ]
   },
   content: {
+    liveEdit: false,
     markdown: {
       prism: {
         theme: 'prism-themes/themes/prism-material-oceanic.css'
