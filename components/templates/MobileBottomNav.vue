@@ -7,10 +7,15 @@
         <nuxt-link
           :key="link.slug"
           class="block md:flex md:justify-center w-full p-2 md:p-4 text-light-fg dark:text-dark-fg hover:no-underline hover:text-primary-base dark:hover:text-primary-base text-center visited:text-primary-gray transition-colors duration-300 ease-linear"
-          :to="localePath({ name: link.slug })"
+          :to="
+          localePath({
+            name: link.slug,
+            params: { topic: 'welcome', slug: 'welcome' },
+          })
+          "
         >
-          <component
-            :is="link.icon + '-icon'"
+          <icon-collection
+            :name="link.icon"
             class="inline-block h-5 fill-current dark:fill-primary-lightgreen mb-1"
           />
           <span
@@ -23,22 +28,6 @@
     </div>
   </nav>
 </template>
-
-<script>
-import BlogIcon from "~/assets/icons/blog.svg?inline";
-import WikiIcon from "~/assets/icons/books.svg?inline";
-import TopicsIcon from "~/assets/icons/resources.svg?inline";
-import ContactIcon from "~/assets/icons/envelope-open-text.svg?inline";
-
-export default {
-  components: {
-    BlogIcon,
-    WikiIcon,
-    TopicsIcon,
-    ContactIcon,
-  },
-};
-</script>
 
 <style lang="scss" scoped>
 nav {

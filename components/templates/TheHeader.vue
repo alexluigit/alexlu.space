@@ -11,9 +11,9 @@
         class="group z-10 flex items-center mr-auto space-x-2 text-primary-gray h-7 lg:h-10"
         to="/"
       >
-        <Logo
-          class="transform group-hover:fill-primary-lightgreen h-8 lg:h-10 fill-current text-light-fg dark:text-dark-fg transition duration-300 ease-linear"
-          :class="{ 'transform rotate-90': !onTop }"
+        <icon-collection name="logo"
+             class="transform group-hover:fill-primary-lightgreen h-8 lg:h-10 fill-current text-light-fg dark:text-dark-fg transition duration-300 ease-linear"
+             :class="{ 'transform rotate-90': !onTop }"
         />
         <h1
           class="text-2xl text-primary-gray tracking-wide font-bold lg:text-3xl dark:text-dark-fg"
@@ -31,7 +31,12 @@
           >
             <NuxtLink
               class="block font-medium uppercase hover:no-underline light:hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen text-light-fg dark:text-dark-fg transition-colors duration-300 ease-linear"
-              :to="localePath({ name: link.slug })"
+              :to="
+                localePath({
+                  name: link.slug,
+                  params: { topic: 'welcome', slug: 'welcome' },
+                })
+              "
             >
               {{ link.name }}
             </NuxtLink>
@@ -46,10 +51,7 @@
 </template>
 
 <script>
-import Logo from "~/assets/icons/angle-double-right.svg?inline";
-
 export default {
-  components: { Logo },
   data() {
     return { onTop: true };
   },
